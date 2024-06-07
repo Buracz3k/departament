@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Raporty SCP</title>
+    <style>
+        body {
+            background-color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        #report-form {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: red;
+            color: #fff;
+            font-size: 16px;
+            cursor: not-allowed;
+        }
+        button.enabled {
+            background-color: green;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="report-form">
+        <label for="title">Tytuł badania:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="object-class">Klasa podmiotu:</label>
+        <select id="object-class" name="objectClass" required>
+            <option value="">Wybierz klasę</option>
+            <option value="Safe">Safe</option>
+            <option value="Euclid">Euclid</option>
+            <option value="Keter">Keter</option>
+        </select>
+
+        <label for="approval">Czy była zgoda KE:</label>
+        <select id="approval" name="approval" required>
+            <option value="">Wybierz</option>
+            <option value="TAK">TAK</option>
+            <option value="NIE">NIE</option>
+        </select>
+
+        <label for="scientist">Imię Naukowca:</label>
+        <input type="text" id="scientist" name="scientist" required>
+
+        <label for="assistant-staff">Personel Asystujący:</label>
+        <input type="text" id="assistant-staff" name="assistantStaff" required>
+
+        <label for="armed-staff">Personel Zbrojny:</label>
+        <input type="text" id="armed-staff" name="armedStaff" required>
+
+        <label for="class-d-amount">Ilość klasy D:</label>
+        <input type="number" id="class-d-amount" name="classDAmount" required>
+
+        <label for="risk-level">Poziom Ryzyka:</label>
+        <input type="text" id="risk-level" name="riskLevel" required>
+
+        <label for="class-d-status">Status klasy D po badaniu:</label>
+        <input type="text" id="class-d-status" name="classDStatus" required>
+
+        <label for="research-problem">Problem badawczy:</label>
+        <input type="text" id="research-problem" name="researchProblem" required>
+
+        <label for="hypothesis">Hipoteza:</label>
+        <input type="text" id="hypothesis" name="hypothesis" required>
+
+        <label for="authorization-level">Stopień autoryzacji:</label>
+        <input type="text" id="authorization-level" name="authorizationLevel" required>
+
+        <label for="experiment-description">Przebieg badań:</label>
+        <textarea id="experiment-description" name="experimentDescription" required></textarea>
+
+        <label for="conclusion">Wniosek:</label>
+        <textarea id="conclusion" name="conclusion" required></textarea>
+
+        <button type="submit" id="submit-button">Wyślij</button>
+    </form>
+    <div id="response"></div>
+    <script src="script.js"></script>
+</body>
+</html>
