@@ -7,22 +7,19 @@
         body, html {
             height: 100%;
             margin: 0;
-            padding-top: 50px; /* Przesunięcie całej strony w dół */
             background-color: #2e2e2e;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            overflow-y: auto;
+            justify-content: flex-start;
+            padding-top: 50px; /* Dodanie odstępu od góry */
         }
 
         .title {
             color: #fff;
             font-size: 24px;
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            margin-bottom: 20px; /* Dodanie odstępu pod tytułem */
         }
 
         #report-form {
