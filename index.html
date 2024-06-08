@@ -18,7 +18,9 @@
         .title {
             color: #fff;
             font-size: 24px;
-            margin-top: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
         }
 
         #report-form {
@@ -27,11 +29,11 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 90%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
         }
 
         label {
@@ -42,7 +44,6 @@
             width: 100%;
             padding: 8px;
             margin-top: 5px;
-            margin-bottom: 10px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
@@ -53,6 +54,7 @@
         }
 
         button {
+            grid-column: span 2;
             width: 100%;
             padding: 10px;
             border: none;
@@ -67,13 +69,17 @@
             background-color: green;
             cursor: pointer;
         }
+
+        .full-width {
+            grid-column: span 2;
+        }
     </style>
 </head>
 <body>
     <h1 class="title">Departament Naukowy</h1>
     <form id="report-form">
-        <label for="title">Tytuł badania:</label>
-        <input type="text" id="title" name="title" required>
+        <label for="title" class="full-width">Tytuł badania:</label>
+        <input type="text" id="title" name="title" class="full-width" required>
 
         <label for="object-class">Klasa podmiotu:</label>
         <select id="object-class" name="objectClass" required>
@@ -117,11 +123,11 @@
         <label for="hypothesis">Hipoteza:</label>
         <input type="text" id="hypothesis" name="hypothesis" required>
 
-        <label for="experiment-description">Przebieg badań:</label>
-        <textarea id="experiment-description" name="experimentDescription" required></textarea>
+        <label for="experiment-description" class="full-width">Przebieg badań:</label>
+        <textarea id="experiment-description" name="experimentDescription" class="full-width" required></textarea>
 
-        <label for="conclusion">Wniosek:</label>
-        <textarea id="conclusion" name="conclusion" required></textarea>
+        <label for="conclusion" class="full-width">Wniosek:</label>
+        <textarea id="conclusion" name="conclusion" class="full-width" required></textarea>
 
         <button type="submit" id="submit-button" disabled>Wyślij</button>
     </form>
