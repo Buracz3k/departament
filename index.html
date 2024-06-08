@@ -9,15 +9,10 @@
             margin: 0;
             background-color: #2e2e2e;
             font-family: Arial, sans-serif;
-        }
-
-        .wrapper {
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 20px;
         }
 
         .title {
@@ -33,15 +28,15 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            width: 80%;
-            max-width: 1000px;
+            width: 90%;
+            max-width: 800px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
 
         input, select, textarea {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 8px;
             margin-top: 5px;
             margin-bottom: 10px;
@@ -56,7 +51,7 @@
 
         button {
             grid-column: span 2;
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             border: none;
             border-radius: 5px;
@@ -77,64 +72,63 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <h1 class="title">Departament Naukowy</h1>
-        <form id="report-form">
-            <label for="title" class="full-width">Tytuł badania:</label>
-            <input type="text" id="title" name="title" class="full-width" required>
+    <h1 class="title">Departament Naukowy</h1>
+    <form id="report-form">
+        <label for="title" class="full-width">Tytuł badania:</label>
+        <input type="text" id="title" name="title" class="full-width" required>
 
-            <label for="object-class">Klasa podmiotu:</label>
-            <select id="object-class" name="objectClass" required>
-                <option value="">Wybierz klasę</option>
-                <option value="Safe">Safe</option>
-                <option value="Euclid">Euclid</option>
-                <option value="Keter">Keter</option>
-            </select>
+        <label for="object-class">Klasa podmiotu:</label>
+        <select id="object-class" name="objectClass" required>
+            <option value="">Wybierz klasę</option>
+            <option value="Safe">Safe</option>
+            <option value="Euclid">Euclid</option>
+            <option value="Keter">Keter</option>
+        </select>
 
-            <label for="approval">Czy była zgoda KE:</label>
-            <select id="approval" name="approval" required>
-                <option value="">Wybierz</option>
-                <option value="TAK">TAK</option>
-                <option value="NIE">NIE</option>
-            </select>
+        <label for="approval">Czy była zgoda KE:</label>
+        <select id="approval" name="approval" required>
+            <option value="">Wybierz</option>
+            <option value="TAK">TAK</option>
+            <option value="NIE">NIE</option>
+        </select>
 
-            <label for="scientist">Imię Naukowca:</label>
-            <input type="text" id="scientist" name="scientist" required>
+        <label for="scientist">Imię Naukowca:</label>
+        <input type="text" id="scientist" name="scientist" required>
 
-            <label for="assistant-staff">Personel Asystujący:</label>
-            <input type="text" id="assistant-staff" name="assistantStaff" required>
+        <label for="assistant-staff">Personel Asystujący:</label>
+        <input type="text" id="assistant-staff" name="assistantStaff" required>
 
-            <label for="armed-staff">Personel Zbrojny:</label>
-            <input type="text" id="armed-staff" name="armedStaff" required>
+        <label for="armed-staff">Personel Zbrojny:</label>
+        <input type="text" id="armed-staff" name="armedStaff" required>
 
-            <label for="class-d-amount">Ilość klasy D:</label>
-            <input type="number" id="class-d-amount" name="classDAmount" required>
+        <label for="class-d-amount">Ilość klasy D:</label>
+        <input type="number" id="class-d-amount" name="classDAmount" required>
 
-            <label for="risk-level">Poziom Ryzyka:</label>
-            <input type="text" id="risk-level" name="riskLevel" required>
+        <label for="risk-level">Poziom Ryzyka:</label>
+        <input type="text" id="risk-level" name="riskLevel" required>
 
-            <label for="authorization-level">Stopień autoryzacji:</label>
-            <input type="text" id="authorization-level" name="authorizationLevel" required>
+        <label for="authorization-level">Stopień autoryzacji:</label>
+        <input type="text" id="authorization-level" name="authorizationLevel" required>
 
-            <label for="class-d-status">Status klasy D po badaniu:</label>
-            <input type="text" id="class-d-status" name="classDStatus" required>
+        <label for="class-d-status">Status klasy D po badaniu:</label>
+        <input type="text" id="class-d-status" name="classDStatus" required>
 
-            <label for="research-problem">Problem badawczy:</label>
-            <input type="text" id="research-problem" name="researchProblem" required>
+        <label for="research-problem">Problem badawczy:</label>
+        <input type="text" id="research-problem" name="researchProblem" required>
 
-            <label for="hypothesis">Hipoteza:</label>
-            <input type="text" id="hypothesis" name="hypothesis" required>
+        <label for="hypothesis">Hipoteza:</label>
+        <input type="text" id="hypothesis" name="hypothesis" required>
 
-            <label for="experiment-description" class="full-width">Przebieg badań:</label>
-            <textarea id="experiment-description" name="experimentDescription" class="full-width" required></textarea>
+        <label for="experiment-description" class="full-width">Przebieg badań:</label>
+        <textarea id="experiment-description" name="experimentDescription" class="full-width" required></textarea>
 
-            <label for="conclusion" class="full-width">Wniosek:</label>
-            <textarea id="conclusion" name="conclusion" class="full-width" required></textarea>
+        <label for="conclusion" class="full-width">Wniosek:</label>
+        <textarea id="conclusion" name="conclusion" class="full-width" required></textarea>
 
-            <button type="submit" id="submit-button" disabled>Wyślij</button>
-        </form>
-        <div id="response"></div>
-    </div>
+        <button type="submit" id="submit-button" disabled>Wyślij</button>
+    </form>
+    <div id="response"></div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('report-form');
