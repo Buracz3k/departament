@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Raporty DN</title>
+    <title>Raporty SCP</title>
     <style>
         body, html {
             height: 100%;
@@ -33,6 +33,8 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             margin-top: 20px;
+            width: 80%;
+            max-width: 600px;
         }
 
         input, select, textarea {
@@ -81,7 +83,45 @@
                 <option value="Keter">Keter</option>
             </select>
 
-            <!-- Dodaj pozostałe pola formularza -->
+            <label for="approval">Czy była zgoda KE:</label>
+            <select id="approval" name="approval" required>
+                <option value="">Wybierz</option>
+                <option value="TAK">TAK</option>
+                <option value="NIE">NIE</option>
+            </select>
+
+            <label for="scientist">Imię Naukowca:</label>
+            <input type="text" id="scientist" name="scientist" required>
+
+            <label for="assistant-staff">Personel Asystujący:</label>
+            <input type="text" id="assistant-staff" name="assistantStaff" required>
+
+            <label for="armed-staff">Personel Zbrojny:</label>
+            <input type="text" id="armed-staff" name="armedStaff" required>
+
+            <label for="class-d-amount">Ilość klasy D:</label>
+            <input type="number" id="class-d-amount" name="classDAmount" required>
+
+            <label for="risk-level">Poziom Ryzyka:</label>
+            <input type="text" id="risk-level" name="riskLevel" required>
+
+            <label for="class-d-status">Status klasy D po badaniu:</label>
+            <input type="text" id="class-d-status" name="classDStatus" required>
+
+            <label for="research-problem">Problem badawczy:</label>
+            <input type="text" id="research-problem" name="researchProblem" required>
+
+            <label for="hypothesis">Hipoteza:</label>
+            <input type="text" id="hypothesis" name="hypothesis" required>
+
+            <label for="authorization-level">Stopień autoryzacji:</label>
+            <input type="text" id="authorization-level" name="authorizationLevel" required>
+
+            <label for="experiment-description">Przebieg badań:</label>
+            <textarea id="experiment-description" name="experimentDescription" required></textarea>
+
+            <label for="conclusion">Wniosek:</label>
+            <textarea id="conclusion" name="conclusion" required></textarea>
 
             <button type="submit" id="submit-button" disabled>Wyślij</button>
         </form>
